@@ -1,0 +1,4 @@
+#weather
+    ol
+        li(ng-repeat="data in vm.DarkSkyService.data")
+            | {{ vm.isoDate(data.daily.data[0].time) }}: High: {{ data.daily.data[0].temperatureHigh }}&deg;F; Low: {{ data.daily.data[0].temperatureLow }}&deg;F. {{ data.daily.data[0].summary }}
