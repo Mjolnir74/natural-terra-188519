@@ -35138,6 +35138,8 @@ var MapController =
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             loadMap(position.coords);
+        }, function () {
+            loadMap(coords);
         });
     } else {
         loadMap(coords);

@@ -43,6 +43,8 @@ class MapController {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 loadMap(position.coords);
+            }, () => {
+                loadMap(coords);
             });
         } else {
             loadMap(coords);
